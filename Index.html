@@ -17,8 +17,8 @@
     <title>The Kantin Shop</title>
 </head>
 
-<body class="text-white font-poppins ">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent position-sticky top-0 w-100">
+<body class="text-white font-poppins">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-transparent sticky-top top-0 w-100">
         <div class="container-fluid d-flex justify-content-center align-items-center w-100">
             <!-- Kiri: Dua Pilihan Menu -->
             <div class="d-flex">
@@ -31,12 +31,12 @@
                     </li>
                 </ul>
             </div>
-            
+
             <!-- Tengah: Logo utama -->
             <a class="navbar-brand" href="#">
                 <img src="Img/Logo.png" alt="Logo" width="100%" height="100%" class="d-inline-block align-text-top">
             </a>
-    
+
             <div class="d-flex">
                 <ul class="navbar-nav mb-2 mb-lg-0">
                     <li class="nav-item">
@@ -46,13 +46,9 @@
                         <a class="nav-link" href="#">Pricing</a>
                     </li>
                 </ul>
-            </div>           
+            </div>
         </div>
     </nav>
-    
-    
-    
-
 
     <div class="container position-relative mt-5">
         <div class="row">
@@ -61,13 +57,12 @@
                     <span class="typewriter fw-semibold " style="font-size: 64px;">The Kantin</span>
                     <img id="tanganImage" class="tangan-slide" src="Img/TANGAN.png" alt=""
                         style="top: -24px; position: absolute;">
-
                     <br>Sh<img src="Img/O_Font.png">p
                 </h1>
                 <p class="subtitle" style="font-size: 10px;">Lorem ipsum dolor sit, amet consectetur adipisicing elit.
                     Quasi, sunt.</p>
                 <a class="btn btn-light ps-3 pe-3" href="#" role="button" style="border-radius: 38px;">
-                    <b style="font-size: 20px; color: #603F26  ;">GET NOW</b>
+                    <b style="font-size: 20px; color: #603F26;">GET NOW</b>
                 </a>
             </div>
             <div class="col-md-6 d-flex align-items-center justify-content-center animate-left-to-right">
@@ -76,8 +71,59 @@
         </div>
     </div>
 
-
-
+    <div class="container position-relative mt-5 text-center">
+        <div class="row">
+            <div class="col-md-8">
+                <h1>Best Seller</h1>
+                <div class="highlight-box">
+                    <img src="Img/Makanan.png" alt="">
+                </div>
+            </div>
+            <div class="col-md-4 " style="padding-top: 10%;">
+                <h2 class="special-menu-title fw-semibold ">
+                    <span>SPECIAL</span>
+                    <span style="background-color: #FF6500;">MENU</span>
+                </h2>
+                <div id="specialMenuCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- Item 1 -->
+                        <div class="carousel-item active">
+                            <div class="highlight-item text-center">
+                                <img src="Img/Logo.png" alt="Risol Mayonaise" style="width: 150px;">
+                                <h5>Risol Mayonaise</h5>
+                                <p>Rp. 3.500/pcs</p>
+                            </div>
+                        </div>
+                        <!-- Item 2 -->
+                        <div class="carousel-item">
+                            <div class="highlight-item text-center">
+                                <img src="Img/Makanan.png" alt="Product 2" style="width: 150px;">
+                                <h5>Product 2</h5>
+                                <p>Rp. 5.000/pcs</p>
+                            </div>
+                        </div>
+                        <!-- Item 3 -->
+                        <div class="carousel-item">
+                            <div class="highlight-item text-center">
+                                <img src="Img/TANGAN.png" alt="Product 3" style="width: 150px;">
+                                <h5>Product 3</h5>
+                                <p>Rp. 4.500/pcs</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Controls -->
+                    <button class="carousel-control-prev" type="button" data-bs-target="#specialMenuCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#specialMenuCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
