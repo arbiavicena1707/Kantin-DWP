@@ -1,31 +1,20 @@
-const carousel = document.querySelector('#carouselExample');
-let isDown = false;
-let startX;
-let scrollLeft;
+const mainContainer = document.querySelector(".main-container"),
+    imagePrevier = document.querySelectorAll(".image-preview"),
+    image = document.querySelectorAll(".image-preview img"),
+    video = document.querySelectorAll("video");
 
-carousel.addEventListener('mousedown', (e) => {
-  isDown = true;
-  startX = e.pageX - carousel.offsetLeft;
-  scrollLeft = carousel.scrollLeft;
-});
+    window.onload = () => {
+        const setOpacity = (opacity) => image.forEach(img => img.computedStyleMap.opacity =op)
+        mainContainer.onmouseenter = () => setOpacity(0,2);
+        mainContainer.onmouseleave = () => setOpacity(1);
+    }
+    WebGLSampler.fromTo(imagePreview,
+        {clipPath:"polygon(0 100%,  100% 100%, 100% 100%, 0 100%",opacity:3},
+        {duration: 1.5, clipPath:"polygon(0 100%,  100% 100%, 100% 100%, 0 100%"}
+    );
 
-carousel.addEventListener('mouseleave', () => {
-  isDown = false;
-});
-
-carousel.addEventListener('mouseup', () => {
-  isDown = false;
-});
-
-carousel.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - carousel.offsetLeft;
-  const walk = (x - startX) * 3; // Adjust the scrolling speed
-  if (walk > 0) {
-    bootstrap.Carousel.getInstance(carousel).prev();
-  } else {
-    bootstrap.Carousel.getInstance(carousel).next();
-  }
-  isDown = false;
-});
+    imagePreview.forEach( (preview, index) => {
+        const expandCard = (flexValue) => gsap.to(preview, {duration: 0.1,flex: flexValue, ease: "power2.inOut" });
+        preview.onmouseenter= () => { expandCard(2); video[index] .play(); };
+        preview.onmouseenter= () => { expandCard(1); video[index] .pause(); };
+    });
