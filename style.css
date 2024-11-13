@@ -143,7 +143,7 @@ body {
 }
 
 .footer {
-    background: linear-gradient(to bottom, #000000, #0d47a1);
+    background: #000000;
     color: white;
     text-align: center;
     padding: 20px 0;
@@ -157,6 +157,45 @@ body {
     margin: 10px 0 0;
 }
 
+/* Top Menu */
+.card{
+    width: 70%;
+}
+.card-body {
+    position: relative;
+    z-index: 1;
+}
+.hover-gradient {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, rgba(255, 101, 0, 100));
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+.card:hover .hover-gradient {
+    opacity: 1;
+}
+.btn-detail {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius:35px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+.btn-detail:hover {
+    background-color: #333;
+}
+.card-img-top {
+    padding: 10px;
+}
 
 /* ANIMASI FOTO  */
 
