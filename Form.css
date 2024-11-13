@@ -1,0 +1,75 @@
+body {
+    background: linear-gradient(to bottom, #0b1e3f, #4caf50);
+    color: white;
+    font-family: 'Arial', sans-serif;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    margin: 0;
+}
+
+
+
+.logo {
+    margin-bottom: 20px;
+}
+
+.form-container {
+    
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-container h2 {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.form-control {
+    border-radius: 4px;
+    margin-bottom: 15px;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border-radius: 4px;
+    margin-bottom: 15px;
+    
+}
+
+.social-login-container {
+    display: flex;
+    justify-content: space-between;
+}
+
+.social-login-box {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.social-login-box:last-child {
+    margin-right: 0;
+}
+
+.social-login-box .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    background-color: #0b1e3f;
+    color: #fff;
+    font-size: 14px;
+    border-radius: 4px;
+    width: 100%;
+}
+
+.social-login-box .btn i {
+    margin-right: 10px;
+}
+
+p {
+    text-align: center;
+}
