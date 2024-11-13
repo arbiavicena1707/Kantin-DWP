@@ -18,3 +18,17 @@ const mainContainer = document.querySelector(".main-container"),
         preview.onmouseenter= () => { expandCard(2); video[index] .play(); };
         preview.onmouseenter= () => { expandCard(1); video[index] .pause(); };
     });
+
+
+
+ // Ambil elemen logo pertama
+const logo = document.querySelector(".logo");
+
+// Gandakan elemen logo tersebut
+const logoClone = logo.cloneNode(true);
+
+// Hapus id dari elemen yang digandakan agar tidak ada duplikasi id
+logoClone.removeAttribute('id');
+
+// Tambahkan elemen logo yang digandakan ke dalam logo-container
+document.querySelector(".logo-container").append(logoClone);

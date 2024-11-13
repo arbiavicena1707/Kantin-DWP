@@ -158,7 +158,7 @@ body {
 }
 
 
-
+/* ANIMASI FOTO  */
 
 .main-container .image-preview{
     flex: 3;
@@ -246,8 +246,47 @@ body {
 }
 
 .main-container {
-    
-   
     display: flex;    
 }
 
+
+/* ANIMASI JALANNN */
+
+/* Styling gambar logo */
+.logo img {
+    width: 84px;
+    height: 84px;
+    margin-left: 10rem  ;
+}
+
+/* Container utama */
+.logo-container {
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+/* Track animasi */
+.logo-track {
+    display: flex;
+     /* Mengatur jarak antar logo */
+    animation: infinite-scroll 20s linear infinite;
+}
+
+/* Pastikan tidak ada garis logo yang turun */
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+/* Animasi infinite scroll */
+@keyframes infinite-scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
