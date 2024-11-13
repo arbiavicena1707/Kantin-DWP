@@ -1,19 +1,31 @@
-var swiper = new Swiper(".mySwiper", {
-    effect: "coverflow",
-    grabCursor: true,
-    centeredSlides: true,
-    slidesPerView: "auto",
-    coverflowEffect: {
-      rotate: 0,
-      stretch: 0,
-      depth: 150,
-      modifier: 2.5,
-      slideShadows: true,
-    },
-    autoplay: {
-        delay: 3000,
-        disableOnInteraction:false,
+const carousel = document.querySelector('#carouselExample');
+let isDown = false;
+let startX;
+let scrollLeft;
 
-    }
+carousel.addEventListener('mousedown', (e) => {
+  isDown = true;
+  startX = e.pageX - carousel.offsetLeft;
+  scrollLeft = carousel.scrollLeft;
+});
 
-  });
+carousel.addEventListener('mouseleave', () => {
+  isDown = false;
+});
+
+carousel.addEventListener('mouseup', () => {
+  isDown = false;
+});
+
+carousel.addEventListener('mousemove', (e) => {
+  if (!isDown) return;
+  e.preventDefault();
+  const x = e.pageX - carousel.offsetLeft;
+  const walk = (x - startX) * 3; // Adjust the scrolling speed
+  if (walk > 0) {
+    bootstrap.Carousel.getInstance(carousel).prev();
+  } else {
+    bootstrap.Carousel.getInstance(carousel).next();
+  }
+  isDown = false;
+});
