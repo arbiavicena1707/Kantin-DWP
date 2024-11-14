@@ -39,7 +39,7 @@
                             </div>
                             <input type="text" class="form-control mb-3" placeholder="Alamat" id="Alamat" name="Alamat"> 
                             <textarea class="form-control mb-3" placeholder="Deskripsi" rows="4" id="Saran" name="Saran"></textarea>
-                            <button type="submit" class="btn btn-primary" style="background-color: #0B192C;">Submit</button>
+                            <button type="submit" class="btn btn-primary" style="background-color: #0B192C;" name="submit">Submit</button>
 
                             <p>Or register with</p>
 
@@ -61,5 +61,24 @@
             </div>
         </div>
     </body>
+
+    <script>
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbys43Etm4oOwP4QcxFxh0MYPBHoO2OSC90WR8R5n2ODc3ACb3Pb8kFjUmjtx4pfdiow/exec';
+        const form = document.forms['submit-to-google-sheet'];
+    
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                .then(response => {
+                    console.log('Success!', response);
+                    form.reset();  // Mereset form setelah berhasil dikirim
+                    alert("BERHASIL MENGIRIM.");
+                    window.location.href = "Form.html";  // Mengarahkan ulang ke Form.html
+                })
+                .catch(error => console.error('Error!', error.message));
+        });
+    </script>
+    
+    
 
     </html>
