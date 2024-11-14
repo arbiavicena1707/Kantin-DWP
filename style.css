@@ -142,20 +142,6 @@ body {
     filter: drop-shadow(0px 0px 100px rgba(255,101,0,1));
 }
 
-.footer {
-    background: #000000;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
-.footer i {
-    font-size: 24px;
-    margin: 0 30px;
-    color: white;
-}
-.footer p {
-    margin: 10px 0 0;
-}
 
 /* Top Menu */
 .card{
@@ -222,7 +208,7 @@ body {
     transition: all 1s cubic-bezier(0.08,0.82,0.17,1);
     overflow: hidden;
 
-
+    
 }
 .main-container .image-preview:hover img{
     transform: translateX(-20%);
@@ -245,7 +231,7 @@ body {
 .main-container .image-preview:hover .overlay{
     opacity: 1;
     transform: translateY(0%);
-
+    
 }
 .main-container .image-preview:hover .overlay .desc {
     position: absolute;
@@ -328,4 +314,19 @@ body {
     100% {
         transform: translateX(-50%);
     }
+}
+
+.footer {
+    background: #000000;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+.footer i {
+    font-size: 24px;
+    margin: 0 30px;
+    color: white;
+}
+.footer p {
+    margin: 10px 0 0;
 }

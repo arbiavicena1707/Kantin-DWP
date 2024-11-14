@@ -30,14 +30,14 @@ body {
 }
 
 .footer {
-    background: linear-gradient(to bottom, #000000, #0d47a1);
+    background: #000000;
     color: white;
     text-align: center;
     padding: 20px 0;
 }
 .footer i {
     font-size: 24px;
-    margin: 0 15px;
+    margin: 0 30px;
     color: white;
 }
 .footer p {
