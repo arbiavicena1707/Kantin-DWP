@@ -1,63 +1,42 @@
 body {
     background: linear-gradient(to bottom, #0a1f44, #d3d3d3);
     display: flex;
-    flex-direction: column; /* Mengatur elemen agar tersusun secara vertikal */
+    flex-direction: column;
     align-items: center;
-    height: 100vh;
     margin: 0;
-  }
-  
+    padding: 0;
+    min-height: 100vh;
+}
 
-.card {
-    background-color: rgba(0, 0, 0, 0.5);
+.product-card {
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for transparency */
     border-radius: 15px;
-    padding: 30px;
-    width: 600px;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    max-width: 800px;
     color: white;
-    position: relative;
-    opacity: 0.8;
-    /* Atur tingkat transparansi di sini */
-  }
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin-top: 20px;
+}
 
+.product-image {
+    max-width: 100%;
+    border-radius: 10px;
+}
 
-  .product-image {
-    position: absolute;
-    left: 20px;
-    bottom: 20px;
-    width: 200px;
-  }
-
-  .product-details {
-    margin-left: 250px;
-  }
-
-  .product-details h1 {
-    font-size: 50px;
+.product-details h2 {
+    font-size: 2rem;
     font-weight: bold;
-  }
+}
 
-  .product-details h2 {
-    font-size: 30px;
-    font-weight: bold;
-  }
-
-  .product-details p {
-    font-size: 14px;
+.product-details p {
+    font-size: 1rem;
     margin-top: 10px;
-  }
+}
 
-  .size-buttons {
-    margin-top: 20px;
-  }
-
-  .size-buttons button {
+.size-buttons button {
     margin-right: 10px;
-  }
+}
 
-  .order-button {
+.order-button {
     margin-top: 20px;
-  }
+}
