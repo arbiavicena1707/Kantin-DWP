@@ -3,7 +3,7 @@
 /* Warna Latar */
 body {
         background: rgb(11,25,44);
-        background: linear-gradient(180deg, rgba(11,25,44,1) 24%, rgba(4,137,182,100) 98%); 
+        background: linear-gradient(180deg, #0B192C 35%, #8020B8 75%); 
         background-repeat: no-repeat;
         background-size: cover;
     }
