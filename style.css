@@ -12,6 +12,37 @@ body {
     background-size: cover;
 }
 
+/* Navbar */
+/* Navbar animations */
+.navbar-brand img {
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1) rotate(5deg);
+}
+
+.nav-link {
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 50%;
+    background-color: #FF6500;
+    transition: all 0.3s ease;
+}
+
+.nav-link:hover::after {
+    width: 100%;
+    left: 0;
+}
+
 
 .sacramento-regular {
     font-family: "Sacramento", cursive;
@@ -425,4 +456,33 @@ footer hr {
 .text-muted {
     font-size: 0.9rem;
     line-height: 1.6;
+}
+
+
+/* animasi */
+/* Animasi untuk efek transisi */
+.fade-out {
+    animation: fadeOut 0.5s forwards;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s forwards;
+}
+
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }

@@ -322,7 +322,28 @@
             </div>
         </div>
     </footer>
-</body>
+
+    <script>
+        // Contoh kode JavaScript
+        function navigateWithAnimation(event, url) {
+            event.preventDefault();
+            document.body.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = url;
+            }, 500);
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const aiceLink = document.querySelector('a[href="Detail Aice.html"]');
+            const homeLink = document.querySelector('a[href="index.html"]');
+
+            aiceLink.addEventListener('click', (event) => navigateWithAnimation(event, 'Detail Aice.html'));
+            homeLink.addEventListener('click', (event) => navigateWithAnimation(event, 'index.html'));
+
+            document.body.classList.add('fade-in');
+        });
+    </script>
+    </body>
 
 
 </html>

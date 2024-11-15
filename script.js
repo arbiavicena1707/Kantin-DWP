@@ -32,3 +32,27 @@ logoClone.removeAttribute('id');
 
 // Tambahkan elemen logo yang digandakan ke dalam logo-container
 document.querySelector(".logo-container").append(logoClone);
+
+// Fungsi untuk menambahkan efek fade-out saat keluar
+function navigateWithAnimation(event, url) {
+    event.preventDefault();  // Mencegah perpindahan halaman langsung
+
+    document.body.classList.add('fade-out');  // Menambahkan kelas fade-out
+
+    setTimeout(() => {
+        window.location.href = url;  // Pindah ke halaman target setelah animasi selesai
+    }, 500);  // Waktu timeout disesuaikan dengan durasi animasi
+}
+
+// Tambahkan event listener ke tautan "Aice" dan "Home"
+document.addEventListener('DOMContentLoaded', function () {
+    const aiceLink = document.querySelector('a[href="Detail Aice.html"]');
+    const homeLink = document.querySelector('a[href="index.html"]');
+
+    aiceLink.addEventListener('click', (event) => navigateWithAnimation(event, 'Detail Aice.html'));
+    homeLink.addEventListener('click', (event) => navigateWithAnimation(event, 'index.html'));
+
+    // Menambahkan efek fade-in pada saat memuat halaman
+    document.body.classList.add('fade-in');
+});
+
