@@ -47,3 +47,12 @@ body {
 .footer p {
   margin: 10px 0 0;
 }
+.social-icon {
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+.social-icon:hover {
+  transform: translateY(-5px) scale(1.2);
+  color: #FF6500 !important;
+}
